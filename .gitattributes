@@ -1,0 +1,23 @@
+# 默认由 git 自动判断文本文件
+* text=auto
+
+# Windows 脚本必须是 CRLF，否则 cmd / wscript 解析会出错
+*.bat text eol=crlf
+*.vbs text eol=crlf
+*.cmd text eol=crlf
+
+# 源码与文档统一 LF，避免跨平台 diff 噪音
+*.py   text eol=lf
+*.md   text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
+*.txt  text eol=lf
+*.json text eol=lf
+
+# 标记二进制类型，避免被当作文本处理
+*.aac binary
+*.mp3 binary
+*.m4a binary
+*.wav binary
+*.pt  binary
+*.bin binary

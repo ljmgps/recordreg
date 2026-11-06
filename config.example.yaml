@@ -1,0 +1,39 @@
+# RecordReg 配置
+# 本文件由「设置」界面维护，也可以手动编辑；保存设置时会重写格式。
+# 更详细的说明见 docs/DESIGN.md
+
+paths:
+  models: models
+  output: output
+  cache: cache
+  db: data/app.db
+  ffmpeg: ''
+audio:
+  target_sample_rate: 16000
+  channels: 1
+  keep_cache_wav: false
+vad:
+  max_single_segment_time: 30000
+  min_segment_time: 400
+  merge_gap_time: 200
+  split_if_over_time: 8000
+  split_target_time: 5000
+  max_end_silence_time: 500
+  speech_noise_thres: 0.6
+asr:
+  language: zh
+  use_itn: true
+  batch_size_s: 120
+speaker:
+  enable: true
+  mode: fixed_k
+  k: 2
+  max_k: 4
+  min_segment_ms: 600
+  smoothing: true
+  turn_gap_sec: 1.5
+output:
+  write_markdown: true
+  write_json: true
+
+hotwords: []

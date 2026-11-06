@@ -1,0 +1,29 @@
+# ---- Python ----
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ---- 模型与缓存（体积大，首次运行自动下载）----
+models/
+cache/
+
+# ---- 用户数据：录音、转写结果、索引、日志 ----
+output/
+data/
+logs/
+tests/fixtures/*
+!tests/fixtures/.gitkeep
+
+# ---- 本地配置（含个人路径，用 config.example.yaml 代替）----
+config.yaml
+config.yaml.bak
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- 内部工具目录 ----
+.workbuddy/
